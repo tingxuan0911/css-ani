@@ -1,0 +1,131 @@
+.block {
+  position: relative;
+  width: 1400px;
+  height: 700px;
+  border: 1px solid #000;
+}
+.block .box {
+  position: absolute;
+  bottom: 0;
+  width: 50px;
+  height: 50px;
+  background-color: lightpink;
+  border: 1px solid #000;
+}
+.block .box-1 {
+  left: 50px;
+  -webkit-animation: go 3s infinite;
+          animation: go 3s infinite;
+}
+.block .box-2 {
+  left: 350px;
+  -webkit-animation: go 3s infinite;
+          animation: go 3s infinite;
+}
+.block .box-3 {
+  left: 650px;
+  -webkit-animation: go 3s infinite;
+          animation: go 3s infinite;
+}
+.block .box-4 {
+  left: 950px;
+  -webkit-animation: go 3s infinite;
+          animation: go 3s infinite;
+}
+
+@-webkit-keyframes ani1 {
+  25% {
+    transform: translateX(100px);
+  }
+  50% {
+    transform: translateX(50px);
+  }
+  100% {
+    transform: translateX(200px);
+  }
+}
+
+@keyframes ani1 {
+  25% {
+    transform: translateX(100px);
+  }
+  50% {
+    transform: translateX(50px);
+  }
+  100% {
+    transform: translateX(200px);
+  }
+}
+@-webkit-keyframes go {
+  100% {
+    transform: translateY(-500px);
+  }
+}
+@keyframes go {
+  100% {
+    transform: translateY(-500px);
+  }
+}
+.container {
+  position: relative;
+  width: 100%;
+  height: 1200px;
+}
+.container .box {
+  position: relative;
+  width: 100px;
+  height: 100px;
+  background-color: aqua;
+  border-radius: 99em;
+}
+.container .box-1 {
+  top: 300px;
+  left: 600px;
+  -webkit-animation: jump 1s infinite alternate cubic-bezier(0.65, 0, 0.35, 1);
+          animation: jump 1s infinite alternate cubic-bezier(0.65, 0, 0.35, 1);
+}
+.container .box-2 {
+  position: relative;
+  top: 300px;
+  left: 300px;
+  transition-duration: 1s;
+}
+.container .box-2:hover {
+  transform: scale(1.3);
+}
+.container .box-2:hover::after {
+  opacity: 0;
+  z-index: -1;
+  transform: scale(1.8);
+  transition-duration: 1s;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+.container .box-2::before {
+  content: "";
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  background-color: aqua;
+  border-radius: 50%;
+}
+.container .box-2::after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  width: 100px;
+  height: 100px;
+  border-radius: 99em;
+  transform: scale(1);
+}
+
+@-webkit-keyframes jump {
+  100% {
+    transform: translateY(-200px);
+  }
+}
+
+@keyframes jump {
+  100% {
+    transform: translateY(-200px);
+  }
+}/*# sourceMappingURL=02-css進階動畫.css.map */

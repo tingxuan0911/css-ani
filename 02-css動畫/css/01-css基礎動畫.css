@@ -1,0 +1,125 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.container .row {
+  display: flex;
+  margin: 0 -10px;
+}
+.container .row .col-4 {
+  width: 25%;
+  padding: 0 10px;
+}
+.container .row .col-4 .product-card {
+  position: relative;
+  width: 100%;
+  height: 150px;
+  padding: 15px 10px;
+  border: 1px solid #000;
+}
+.container .row .col-4 .product-card:hover {
+  background-color: aqua;
+}
+.container .row .col-4 .product-card:hover::before {
+  opacity: 1;
+}
+.container .row .col-4 .product-card:hover > h1 {
+  opacity: 1;
+}
+.container .row .col-4 .product-card:hover > p {
+  opacity: 1;
+}
+.container .row .col-4 .product-card::before {
+  content: "";
+  display: block;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 5px;
+  background-color: plum;
+  transition-duration: 0.5s;
+  opacity: 0;
+}
+.container .row .col-4 .product-card > h1 {
+  opacity: 0;
+  transition-duration: 0.5s;
+}
+.container .row .col-4 .product-card > p {
+  opacity: 0;
+  transition-duration: 0.5s;
+  transition-delay: 0.3s;
+}
+.container .cross {
+  position: relative;
+  width: 100px;
+  height: 100px;
+  border: 1px solid #000;
+}
+.container .cross:hover .line-1 {
+  transform: translate(-50%, -50%) rotate(45deg);
+}
+.container .cross:hover .line-2 {
+  transform: translate(-50%, -50%) rotate(-45deg);
+}
+.container .cross .line {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 80px;
+  height: 8px;
+  border: 1px solid #000;
+  transform: translate(-50%, -50%);
+  transition-duration: 1s;
+}
+.container .hamburger-icon {
+  position: relative;
+  width: 100px;
+  height: 100px;
+  border: 1px solid rgb(0, 0, 0);
+}
+.container .hamburger-icon:focus .line-1 {
+  top: 50%;
+  transform: translate(-50%, -50%) rotate(45deg);
+  transition-property: top, transform;
+  transition-duration: 0.1s, 1s;
+}
+.container .hamburger-icon:focus .line-2 {
+  opacity: 0;
+}
+.container .hamburger-icon:focus .line-3 {
+  top: 50%;
+  transform: translate(-50%, -50%) rotate(-45deg);
+  transition-property: top, transform;
+  transition-duration: 0.1s, 1s;
+}
+.container .hamburger-icon .line {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80px;
+  height: 8px;
+  border: 1px solid #000;
+  background-color: #000;
+  transition-duration: 0.5s;
+}
+.container .hamburger-icon .line-1 {
+  top: 25%;
+  transition-property: top, transform;
+  transition-duration: 1s, 0.1s;
+}
+.container .hamburger-icon .line-3 {
+  top: 75%;
+  transition-property: top, transform;
+  transition-duration: 1s, 0.1s;
+}/*# sourceMappingURL=01-css基礎動畫.css.map */
